@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   StyleSheet,
@@ -6,15 +6,26 @@ import {
   TouchableNativeFeedbackBase,
 } from 'react-native';
 
-const TimerClock: React.FC = ({thenumber: number, text: string}) => {
+export type Props = {
+  number: number;
+  text: string;
+};
+
+const TimerClock: React.FC<Props> = ({number, text}) => {
+  const [numberValue, setNumberValue] = useState(number);
+  const handleClick = () => {
+    setNumberValue(prev => prev + 1);
+  };
   return (
     <View style={styles.container}>
       <View>
-        <Text>{thenumber}</Text>
+        <Text testID="text">{numberValue}</Text>
         <Text>{text}</Text>
       </View>
       <View>
-        <Text>Button</Text>
+        <Text onPress={handleClick} testID="plusbutton">
+          Button
+        </Text>
       </View>
     </View>
   );
