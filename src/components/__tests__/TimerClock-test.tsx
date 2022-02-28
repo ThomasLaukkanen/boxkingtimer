@@ -15,5 +15,5 @@ it('Renders corectly', () => {
 test('When you click - button it should increase the number', () => {
   const {getByTestId} = render(<TimerClock number={3} text="Rest time" />);
   fireEvent.press(getByTestId('plusbutton'));
-  expect(getByTestId('text')).toEqual('4');
+  expect(getByTestId('text')).toContain('4');
 });
