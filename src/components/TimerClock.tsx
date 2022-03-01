@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   numberBox: {
-    backgroundColor: '#000',
+    backgroundColor: theme.dark,
     borderRadius: 8,
     padding: 16,
     minWidth: 160,
