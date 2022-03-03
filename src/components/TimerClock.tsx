@@ -51,7 +51,8 @@ const styles = StyleSheet.create({
   numberBox: {
     backgroundColor: theme.dark,
     borderRadius: 8,
-    padding: 16,
+    alignItems: 'center',
+    justifyContent: 'space-around',
     minWidth: 160,
     minHeight: 80,
   },
@@ -66,6 +67,8 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 20,
     fontFamily: theme.fontFamily,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   number: {
     color: '#fff',
