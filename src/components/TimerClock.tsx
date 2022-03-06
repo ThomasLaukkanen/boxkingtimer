@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, Text, TouchableOpacity, Image} from 'react-native';
 import {theme} from '../theme';
+import Button from './Button';
+import {MinusIcon, PlusIcon} from './Icons';
+
 export type Props = {
   number: number;
   text: string;
@@ -18,22 +21,16 @@ const TimerClock: React.FC<Props> = ({number, text}) => {
         <Text style={styles.text}>{text}</Text>
       </View>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>
-          <Text
-            style={styles.buttonText}
-            onPress={() => setNumberValue(prev => prev + 1)}
-            testID="plusbutton">
-            +
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
-          <Text
-            style={styles.buttonText}
-            onPress={() => setNumberValue(prev => prev - 1)}
-            testID="minusbutton">
-            -
-          </Text>
-        </TouchableOpacity>
+        <Button
+          onPress={() => setNumberValue(prev => prev - 1)}
+          testID="minusbutton">
+          <MinusIcon />
+        </Button>
+        <Button
+          onPress={() => setNumberValue(prev => prev + 1)}
+          testID="plusbutton">
+          <PlusIcon />
+        </Button>
       </View>
     </View>
   );
@@ -52,23 +49,9 @@ const styles = StyleSheet.create({
     backgroundColor: theme.dark,
     borderRadius: 8,
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     minWidth: 160,
     minHeight: 80,
-  },
-  button: {
-    borderRadius: 100,
-    backgroundColor: '#000',
-    marginRight: 8,
-    height: 48,
-    width: 48,
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 20,
-    fontFamily: theme.fontFamily,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   number: {
     color: '#fff',
@@ -80,6 +63,7 @@ const styles = StyleSheet.create({
     color: '#DC293E',
     textAlign: 'center',
     fontSize: 16,
+    marginBottom: 16,
   },
   buttonContainer: {
     flexDirection: 'row',
