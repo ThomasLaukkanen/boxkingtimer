@@ -5,7 +5,7 @@ export const SmallStats = () => {
   return (
     <View style={styles.container}>
       <Text style={[styles.heading, styles.textStylesGold]}>Hard Sparring</Text>
-      <Text>TIME LEFT</Text>
+      <Text style={styles.timeLeftHeading}>TIME LEFT</Text>
       <Text style={[styles.textStylesGold, styles.timeleftH]}>02:34</Text>
       <Text>/03:00</Text>
       <Text>ROUND</Text>
@@ -36,5 +36,10 @@ const styles = StyleSheet.create({
   },
   timeleftH: {
     color: theme.white,
+    marginTop: 0,
+  },
+  timeLeftHeading: {
+    padding: 0,
+    marginBottom: 0,
   },
 });
