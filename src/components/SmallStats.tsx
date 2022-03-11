@@ -10,7 +10,7 @@ export const SmallStats = () => {
       <Text>/03:00</Text>
       <Text>ROUND</Text>
       <Text>4/6</Text>
-      <Text>REST</Text>
+      <Text style={styles.heading}>REST</Text>
       <Text>03:00</Text>
       <Text>MODULE</Text>
       <Text>3/7</Text>
