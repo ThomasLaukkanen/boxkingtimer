@@ -12,4 +12,5 @@ export const theme = {
   caption: 9.9,
   fontFamily: 'Goldman-Regular',
   fontFamilyBold: 'Goldman-Regular',
+  fontFamilyP: 'Montserat-Regular',
 };
