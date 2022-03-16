@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
   timeLeftHeading: {
     padding: 0,
     marginBottom: 0,
+    marginTop: 12,
   },
   statValue: {
     color: theme.white,
