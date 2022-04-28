@@ -4,7 +4,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Home} from './Home.screen';
 import {History} from './History.screen';
 import {Analytics} from './Analytics.screen';
-import {BoxerGlow} from '../components/Icons';
+import {BoxerGlow, HamburgerIcon, SettingIcon} from '../components/Icons';
 const BottomTabs = createBottomTabNavigator();
 
 export const BottomsTabs: React.FC = () => {
@@ -14,6 +14,10 @@ export const BottomsTabs: React.FC = () => {
         tabBarIcon: () => {
           if (route.name === 'Home') {
             return <BoxerGlow />;
+          } else if (route.name === 'History') {
+            return <HamburgerIcon />;
+          } else if (route.name === 'Analytics') {
+            return <SettingIcon />;
           }
           return <Text>{route.name}</Text>;
         },

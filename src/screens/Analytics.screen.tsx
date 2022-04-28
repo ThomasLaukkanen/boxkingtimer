@@ -1,10 +1,12 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 
 export const Analytics: React.FC = () => {
-  return (
-    <View>
-      <Text></Text>
-    </View>
-  );
+  return <View></View>;
 };
+
+const styles = StyleSheet.create({
+  Icon: {
+    backgroundColor: 'black',
+  },
+});
