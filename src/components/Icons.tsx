@@ -120,12 +120,7 @@ export const PlusIcon: React.FC<IconProps> = ({size, color}) => {
 
 export const HamburgerIcon: React.FC<IconProps> = ({size, color}) => {
   return (
-    <Svg
-      width="24"
-      height="19"
-      viewBox="0 0 24 19"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg">
+    <Svg width="24" height="19" viewBox="0 0 24 19" fill="none">
       <Line y1="17.5" x2="24" y2="17.5" stroke="#ECECEC" stroke-width="3" />
       <Line y1="9.5" x2="24" y2="9.5" stroke="#ECECEC" stroke-width="3" />
       <Line y1="1.5" x2="24" y2="1.5" stroke="#ECECEC" stroke-width="3" />

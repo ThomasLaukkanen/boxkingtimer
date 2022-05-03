@@ -3,6 +3,7 @@ import {Text} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Home} from './Home.screen';
 import {History} from './History.screen';
+
 import {Analytics} from './Analytics.screen';
 import {BoxerGlow, HamburgerIcon, SettingIcon} from '../components/Icons';
 const BottomTabs = createBottomTabNavigator();
@@ -20,6 +21,9 @@ export const BottomsTabs: React.FC = () => {
             return <SettingIcon />;
           }
           return <Text>{route.name}</Text>;
+        },
+        tabBarLabel: () => {
+          return null;
         },
       })}>
       <BottomTabs.Screen name="Home" component={Home} />
