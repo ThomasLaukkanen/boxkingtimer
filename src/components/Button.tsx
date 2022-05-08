@@ -1,4 +1,5 @@
 import React from 'react';
+import {theme} from '../theme';
 import {View, StyleSheet, Text, TouchableOpacity, Image} from 'react-native';
 type Props = {
   height?: number;
@@ -22,6 +23,7 @@ const styles = StyleSheet.create({
     width: 48,
     alignItems: 'center',
     justifyContent: 'center',
+    ...theme.shadow,
   },
 });
 

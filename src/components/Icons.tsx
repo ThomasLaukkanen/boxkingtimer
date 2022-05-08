@@ -8,11 +8,13 @@ import {
   RadialGradient,
   LinearGradient,
 } from 'react-native-svg';
+
 type IconProps = {
   size?: number;
   color?: string;
 };
-export const BoxerGlow: React.FC<IconProps> = ({size = 40, color = 'teal'}) => {
+
+export const BoxerGlow: React.FC<IconProps> = ({size = 40, color = 'red'}) => {
   return (
     <Svg width="44" height="44" viewBox="0 0 44 44" fill={color}>
       <Path

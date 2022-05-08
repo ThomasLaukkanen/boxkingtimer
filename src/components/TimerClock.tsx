@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     minWidth: 160,
     minHeight: 80,
+    ...theme.shadow,
   },
   number: {
     color: '#fff',
@@ -68,5 +69,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+
+    backgroundColor: '#0000',
   },
 });
