@@ -4,7 +4,8 @@ import {View, StyleSheet, Text, TouchableOpacity, Image} from 'react-native';
 type Props = {
   height?: number;
   children: any;
-  onPress: () => {};
+  onPress: () => void;
+  testID: string;
 };
 
 const Button: React.FC<Props> = ({height = 48, children, onPress}) => {
